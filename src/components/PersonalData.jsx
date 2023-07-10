@@ -5,15 +5,15 @@ const PersonalData = () => {
       <div className="card">
         <form autoComplete="off">
           <fieldset>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name:</label>
             <input type="text" id="name" autoFocus required />
           </fieldset>
           <fieldset>
-            <label htmlFor="surname">Surname</label>
+            <label htmlFor="surname">Surname:</label>
             <input type="text" id="surname" required />
           </fieldset>
           <fieldset>
-            <label htmlFor="">Age</label>
+            <label htmlFor="">Age:</label>
             <input
               type="number"
               name="age"
