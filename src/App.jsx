@@ -1,10 +1,12 @@
-import PersonalData from "./components/PersonalData";
+// import PersonalData from "./components/PersonalData";
+import Hobbys from "./components/Hobbys";
 
 function App() {
   return (
     <>
       <div className="container">
-        <PersonalData />
+        {/* <PersonalData /> */}
+        <Hobbys />
       </div>
     </>
   );

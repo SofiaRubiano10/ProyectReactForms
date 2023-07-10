@@ -21,6 +21,7 @@ const PersonalData = () => {
               min="1"
               max="99"
               step="1"
+              required
             ></input>
           </fieldset>
           <button type="submit">Next</button>

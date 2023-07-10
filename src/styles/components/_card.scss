@@ -5,4 +5,8 @@
   padding: 1.3rem;
   margin: 0 1.5rem;
   border-radius: 10px;
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
 }
