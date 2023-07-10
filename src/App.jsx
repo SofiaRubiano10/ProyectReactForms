@@ -1,7 +1,8 @@
 // import PersonalData from "./components/PersonalData";
 // import Hobbys from "./components/Hobbys";
 // import Education from "./components/Education";
-import Happiness from "./components/Happiness";
+// import Happiness from "./components/Happiness";
+import Music from "./components/Music";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         {/* <PersonalData /> */}
         {/* <Hobbys /> */}
         {/* <Education /> */}
-        <Happiness />
+        {/* <Happiness /> */}
+        <Music />
       </div>
     </>
   );
