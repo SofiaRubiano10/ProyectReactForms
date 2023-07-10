@@ -1,0 +1,19 @@
+@use "../variables" as v;
+@use "./label" as l;
+@use "./inputs" as i;
+@use "./button" as b;
+
+form {
+  fieldset {
+    border: none;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+    font-family: v.$font-family;
+    font-weight: 400;
+    @include l.label();
+    @include i.inputs();
+  }
+  @include b.button();
+}

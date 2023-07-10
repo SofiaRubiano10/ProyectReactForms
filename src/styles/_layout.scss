@@ -5,4 +5,22 @@
   height: 100vh;
   padding: 20px;
   font-family: v.$font-family;
+  background-color: v.$bg-container;
+  main {
+    background-color: v.$bg-card;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+    width: 50%;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 15px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: v.$white;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem;
+  }
 }
