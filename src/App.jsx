@@ -1,6 +1,7 @@
 // import PersonalData from "./components/PersonalData";
 // import Hobbys from "./components/Hobbys";
-import Education from "./components/Education";
+// import Education from "./components/Education";
+import Happiness from "./components/Happiness";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <div className="container">
         {/* <PersonalData /> */}
         {/* <Hobbys /> */}
-        <Education />
+        {/* <Education /> */}
+        <Happiness />
       </div>
     </>
   );
