@@ -1,4 +1,7 @@
+import { useContext } from "react";
+import FormContext from "../context/FormContext";
 const Hobbys = () => {
+  const { setStep } = useContext(FormContext);
   return (
     <main>
       <h3>Hobbys</h3>
@@ -75,8 +78,22 @@ const Hobbys = () => {
           </fieldset>
 
           <div className="card__buttons">
-            <button type="submit">Before</button>
-            <button type="submit">Next</button>
+            <button
+              onClick={() => {
+                setStep("personaldata");
+              }}
+              type="submit"
+            >
+              Before
+            </button>
+            <button
+              onClick={() => {
+                setStep("education");
+              }}
+              type="submit"
+            >
+              Next
+            </button>
           </div>
         </form>
       </div>

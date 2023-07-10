@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import FormContext from "../context/FormContext";
+
 const PersonalData = () => {
+  const { setStep } = useContext(FormContext);
   return (
     <main>
       <h3>Personal Data</h3>
@@ -24,7 +28,14 @@ const PersonalData = () => {
               required
             ></input>
           </fieldset>
-          <button type="submit">Next</button>
+          <button
+            onClick={() => {
+              setStep("hobbys");
+            }}
+            type="submit"
+          >
+            Next
+          </button>
         </form>
       </div>
     </main>

@@ -7,7 +7,7 @@ import Music from "./components/Music";
 import FormContext from "./context/FormContext";
 
 function App() {
-  const [step, setStep] = useState("music");
+  const [step, setStep] = useState("personaldata");
   return (
     <FormContext.Provider value={{ step, setStep }}>
       <div className="container">

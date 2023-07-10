@@ -1,4 +1,7 @@
+import { useContext } from "react";
+import FormContext from "../context/FormContext";
 const Music = () => {
+  const { setStep } = useContext(FormContext);
   return (
     <main>
       <h3>Music</h3>
@@ -24,8 +27,14 @@ const Music = () => {
           </fieldset>
 
           <div className="card__buttons">
-            <button type="submit">Before</button>
-            <button type="submit">Next</button>
+            <button
+              onClick={() => {
+                setStep("happiness");
+              }}
+              type="submit"
+            >
+              Before
+            </button>
           </div>
         </form>
       </div>
