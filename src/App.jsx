@@ -1,7 +1,11 @@
+import PersonalData from "./components/PersonalData";
+
 function App() {
   return (
     <>
-      <h1>hallo</h1>
+      <div className="container">
+        <PersonalData />
+      </div>
     </>
   );
 }
