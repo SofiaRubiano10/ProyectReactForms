@@ -9,33 +9,38 @@ const ContactData = () => {
       <div className="card">
         <form autoComplete="off">
           <fieldset>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" autoFocus required />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" />
+            <p className="error">Valid email required</p>
           </fieldset>
           <fieldset>
-            <label htmlFor="surname">Surname:</label>
-            <input type="text" id="surname" required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Age:</label>
+            <label htmlFor="phone">Mobile Phone</label>
             <input
-              type="number"
-              name="age"
-              id="age"
-              min="1"
-              max="99"
-              step="1"
-              required
-            ></input>
+              type="tel"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              autoFocus
+            />
+            <p className="error">Required</p>
           </fieldset>
-          <button
-            onClick={() => {
-              setStep("hobbys");
-            }}
-            type="submit"
-          >
-            Next
-          </button>
+          <div className="card__buttons">
+            <button
+              onClick={() => {
+                setStep("music");
+              }}
+              type="submit"
+            >
+              Before
+            </button>
+            <button
+              onClick={() => {
+                setStep("personaldata");
+              }}
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
         </form>
       </div>
     </main>

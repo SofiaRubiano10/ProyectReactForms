@@ -36,6 +36,14 @@ const Music = () => {
             >
               Before
             </button>
+            <button
+              onClick={() => {
+                setStep("contact");
+              }}
+              type="submit"
+            >
+              Next
+            </button>
           </div>
         </form>
       </div>
