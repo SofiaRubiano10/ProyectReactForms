@@ -12,6 +12,7 @@ const Happiness = () => {
               When was the last time that you felt happy?
             </label>
             <input type="date" id="date" autoFocus required />
+            <p className="error">Required</p>
           </fieldset>
           <fieldset>
             <legend>Do you do anything to make yourself happy? </legend>

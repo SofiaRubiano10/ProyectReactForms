@@ -10,6 +10,7 @@ const Music = () => {
           <fieldset>
             <label htmlFor="name">Name of your favorite artist</label>
             <input type="text" id="name" autoFocus required />
+            <p className="error">Required</p>
           </fieldset>
           <fieldset>
             <legend>You like to listen to music</legend>

@@ -20,6 +20,7 @@ const Hobbys = () => {
               <option value="sing">Sing</option>
               <option value="travel">Travel</option>
             </select>
+            <p className="error">Required</p>
           </fieldset>
           <fieldset>
             <legend>How often do you do it?</legend>
@@ -52,6 +53,7 @@ const Hobbys = () => {
               <option value="sing">Sing</option>
               <option value="travel">Travel</option>
             </select>
+            <p className="error">Required</p>
           </fieldset>
           <fieldset>
             <legend>How often do you do it?</legend>

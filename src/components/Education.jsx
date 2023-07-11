@@ -20,6 +20,7 @@ const Education = () => {
               <option value="master">Master degree</option>
               <option value="doctorate">Doctorate</option>
               <option value="postdoc">Postdoc</option>
+              <p className="error">Required</p>
             </select>
           </fieldset>
           <fieldset>
@@ -27,6 +28,7 @@ const Education = () => {
               Name of the educational institution:
             </label>
             <input type="text" id="nameins" autoFocus required />
+            <p className="error">Required</p>
           </fieldset>
 
           <div className="card__buttons">

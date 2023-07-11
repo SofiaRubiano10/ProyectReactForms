@@ -1,22 +1,20 @@
 import { useContext } from "react";
 import FormContext from "../context/FormContext";
 
-const PersonalData = () => {
+const ContactData = () => {
   const { setStep } = useContext(FormContext);
   return (
     <main>
-      <h3>Personal Data</h3>
+      <h3>Contact Data</h3>
       <div className="card">
         <form autoComplete="off">
           <fieldset>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" autoFocus required />
-            <p className="error">Name required</p>
           </fieldset>
           <fieldset>
             <label htmlFor="surname">Surname:</label>
             <input type="text" id="surname" required />
-            <p className="error">Surname required</p>
           </fieldset>
           <fieldset>
             <label htmlFor="">Age:</label>
@@ -29,7 +27,6 @@ const PersonalData = () => {
               step="1"
               required
             ></input>
-            <p className="error">Age required</p>
           </fieldset>
           <button
             onClick={() => {
@@ -45,4 +42,4 @@ const PersonalData = () => {
   );
 };
 
-export default PersonalData;
+export default ContactData;

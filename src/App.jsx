@@ -5,9 +5,10 @@ import Education from "./components/Education";
 import Happiness from "./components/Happiness";
 import Music from "./components/Music";
 import FormContext from "./context/FormContext";
+import ContactData from "./components/ContactData";
 
 function App() {
-  const [step, setStep] = useState("personaldata");
+  const [step, setStep] = useState("contact");
   return (
     <FormContext.Provider value={{ step, setStep }}>
       <div className="container">
@@ -16,6 +17,7 @@ function App() {
         {step === "education" && <Education />}
         {step === "happiness" && <Happiness />}
         {step === "music" && <Music />}
+        {step === "contact" && <ContactData />}
       </div>
     </FormContext.Provider>
   );
