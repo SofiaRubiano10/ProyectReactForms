@@ -14,9 +14,20 @@ function App() {
     surname: "",
     age: 1,
   });
+  const [hobbysForm, setHobbysForm] = useState({
+    hobbys: "",
+    hobbys2: "",
+  });
   return (
     <FormContext.Provider
-      value={{ step, setStep, personalDataForm, setPersonalDataForm }}
+      value={{
+        step,
+        setStep,
+        personalDataForm,
+        setPersonalDataForm,
+        hobbysForm,
+        setHobbysForm,
+      }}
     >
       <div className="container">
         {step === "personaldata" && <PersonalData />}

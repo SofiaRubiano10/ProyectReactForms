@@ -1,16 +1,32 @@
 import { useContext } from "react";
+import { useFormik } from "formik";
 import FormContext from "../context/FormContext";
+import { hobbysSchema } from "../schemas/hobbysSchema";
 
 const Hobbys = () => {
-  const { setStep } = useContext(FormContext);
+  const { setStep, hobbysForm, setHobbysForm } = useContext(FormContext);
+  const onSubmit = () => {
+    setHobbysForm(values);
+    setStep("education");
+  };
+  const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
+    initialValues: hobbysForm,
+    validationSchema: hobbysSchema,
+    onSubmit,
+  });
   return (
     <main>
       <h3>Hobbys</h3>
       <div className="card">
-        <form onSubmit={handleSubmit} autoComplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off" noValidate>
           <fieldset>
             <label htmlFor="hobbys"> Principal hobby:</label>
-            <select id="hobbys">
+            <select
+              id="hobbys"
+              value={values.hobbys}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            >
               <option value="">Select your hobbys</option>
               <option value="dance">Dance</option>
               <option value="read">Read</option>
@@ -21,7 +37,7 @@ const Hobbys = () => {
               <option value="sing">Sing</option>
               <option value="travel">Travel</option>
             </select>
-            <p className="error">Required</p>
+            {errors.hobbys && <p className="error">{errors.hobbys}</p>}
           </fieldset>
           <fieldset>
             <legend>How often do you do it?</legend>
@@ -43,7 +59,12 @@ const Hobbys = () => {
           </fieldset>
           <fieldset>
             <label htmlFor="hobbys"> Secondary hobby:</label>
-            <select id="hobbys">
+            <select
+              id="hobbys2"
+              value={values.hobbys2}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            >
               <option value="">Select your hobbys</option>
               <option value="dance">Dance</option>
               <option value="read">Read</option>
@@ -54,7 +75,7 @@ const Hobbys = () => {
               <option value="sing">Sing</option>
               <option value="travel">Travel</option>
             </select>
-            <p className="error">Required</p>
+            {errors.hobbys2 && <p className="error">{errors.hobbys2}</p>}
           </fieldset>
           <fieldset>
             <legend>How often do you do it?</legend>
@@ -89,14 +110,7 @@ const Hobbys = () => {
             >
               Before
             </button>
-            <button
-              onClick={() => {
-                setStep("education");
-              }}
-              type="submit"
-            >
-              Next
-            </button>
+            <button type="submit">Next</button>
           </div>
         </form>
       </div>
