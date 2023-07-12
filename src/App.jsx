@@ -8,9 +8,16 @@ import FormContext from "./context/FormContext";
 import ContactData from "./components/ContactData";
 
 function App() {
-  const [step, setStep] = useState("contact");
+  const [step, setStep] = useState("personaldata");
+  const [personalDataForm, setPersonalDataForm] = useState({
+    name: "",
+    surname: "",
+    age: 1,
+  });
   return (
-    <FormContext.Provider value={{ step, setStep }}>
+    <FormContext.Provider
+      value={{ step, setStep, personalDataForm, setPersonalDataForm }}
+    >
       <div className="container">
         {step === "personaldata" && <PersonalData />}
         {step === "hobbys" && <Hobbys />}

@@ -1,22 +1,49 @@
 import { useContext } from "react";
+import { useFormik } from "formik";
 import FormContext from "../context/FormContext";
+import { personalDataSchema } from "../schemas/personalDataSchema";
 
 const PersonalData = () => {
-  const { setStep } = useContext(FormContext);
+  const { setStep, personalDataForm, setPersonalDataForm } =
+    useContext(FormContext);
+  const onSubmit = () => {
+    setPersonalDataForm(values);
+    setStep("hobbys");
+  };
+  const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
+    initialValues: personalDataForm,
+    validationSchema: personalDataSchema,
+    onSubmit,
+  });
   return (
     <main>
       <h3>Personal Data</h3>
       <div className="card">
-        <form autoComplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off" noValidate>
           <fieldset>
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" autoFocus required />
-            <p className="error">Name required</p>
+            <input
+              type="text"
+              id="name"
+              autoFocus
+              required
+              value={values.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.name && <p className="error">{errors.name}</p>}
           </fieldset>
           <fieldset>
             <label htmlFor="surname">Surname:</label>
-            <input type="text" id="surname" required />
-            <p className="error">Surname required</p>
+            <input
+              type="text"
+              id="surname"
+              required
+              value={values.surname}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.surname && <p className="error">{errors.surname}</p>}
           </fieldset>
           <fieldset>
             <label htmlFor="">Age:</label>
@@ -28,17 +55,13 @@ const PersonalData = () => {
               max="99"
               step="1"
               required
+              value={values.age}
+              onChange={handleChange}
+              onBlur={handleBlur}
             ></input>
-            <p className="error">Age required</p>
+            {errors.age && <p className="error">{errors.age}</p>}
           </fieldset>
-          <button
-            onClick={() => {
-              setStep("hobbys");
-            }}
-            type="submit"
-          >
-            Next
-          </button>
+          <button type="submit">Next</button>
         </form>
       </div>
     </main>

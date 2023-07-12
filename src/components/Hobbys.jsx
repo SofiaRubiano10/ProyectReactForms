@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import FormContext from "../context/FormContext";
+
 const Hobbys = () => {
   const { setStep } = useContext(FormContext);
   return (
     <main>
       <h3>Hobbys</h3>
       <div className="card">
-        <form autoComplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off">
           <fieldset>
             <label htmlFor="hobbys"> Principal hobby:</label>
             <select id="hobbys">
