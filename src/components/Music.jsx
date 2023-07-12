@@ -7,7 +7,7 @@ const Music = () => {
   const { setStep, musicForm, setMusicForm } = useContext(FormContext);
   const onSubmit = () => {
     setMusicForm(values);
-    setStep("contact");
+    setStep("final");
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: musicForm,

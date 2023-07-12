@@ -5,7 +5,7 @@ import Education from "./components/Education";
 import Happiness from "./components/Happiness";
 import Music from "./components/Music";
 import FormContext from "./context/FormContext";
-import ContactData from "./components/ContactData";
+import Final from "./components/Final";
 
 function App() {
   const [step, setStep] = useState("personaldata");
@@ -21,6 +21,9 @@ function App() {
   const [educationForm, setEducationForm] = useState({
     educationl: "",
     nameins: "",
+  });
+  const [happinessForm, setHappinessForm] = useState({
+    date: "2023-07-10",
   });
   const [musicForm, setMusicForm] = useState({
     name: "",
@@ -38,6 +41,8 @@ function App() {
         setEducationForm,
         musicForm,
         setMusicForm,
+        happinessForm,
+        setHappinessForm,
       }}
     >
       <div className="container">
@@ -46,7 +51,7 @@ function App() {
         {step === "education" && <Education />}
         {step === "happiness" && <Happiness />}
         {step === "music" && <Music />}
-        {step === "contact" && <ContactData />}
+        {step === "final" && <Final />}
       </div>
     </FormContext.Provider>
   );
