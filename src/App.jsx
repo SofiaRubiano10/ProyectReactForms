@@ -18,6 +18,10 @@ function App() {
     hobbys: "",
     hobbys2: "",
   });
+  const [educationForm, setEducationForm] = useState({
+    educationl: "",
+    nameins: "",
+  });
   return (
     <FormContext.Provider
       value={{
@@ -27,6 +31,8 @@ function App() {
         setPersonalDataForm,
         hobbysForm,
         setHobbysForm,
+        educationForm,
+        setEducationForm,
       }}
     >
       <div className="container">
