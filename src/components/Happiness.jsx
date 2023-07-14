@@ -23,6 +23,7 @@ const Happiness = () => {
             <label htmlFor="date">
               When was the last time that you felt happy?
             </label>
+            TODO:no está guardando fecha
             <input
               type="date"
               id="date"
@@ -32,7 +33,6 @@ const Happiness = () => {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            TODO:no está guardando fecha
             {errors.date && <p className="error">{errors.date}</p>}
           </fieldset>
           <fieldset>

@@ -6,8 +6,16 @@ import Happiness from "./components/Happiness";
 import Music from "./components/Music";
 import FormContext from "./context/FormContext";
 import Final from "./components/Final";
+import StateForms from "./components/StateForms";
 
 function App() {
+  const [stateForms, setStateForms] = useState({
+    personalDataForm: "actual",
+    hobbysForm: "bloqueado",
+    educationForm: "bloqueado",
+    happinessForm: "bloqueado",
+    musicForm: "bloqueado",
+  });
   const [step, setStep] = useState("personaldata");
   const [personalDataForm, setPersonalDataForm] = useState({
     name: "",
@@ -33,6 +41,8 @@ function App() {
       value={{
         step,
         setStep,
+        stateForms,
+        setStateForms,
         personalDataForm,
         setPersonalDataForm,
         hobbysForm,
@@ -46,6 +56,7 @@ function App() {
       }}
     >
       <div className="container">
+        <StateForms />
         {step === "personaldata" && <PersonalData />}
         {step === "hobbys" && <Hobbys />}
         {step === "education" && <Education />}

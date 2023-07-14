@@ -4,11 +4,21 @@ import FormContext from "../context/FormContext";
 import { personalDataSchema } from "../schemas/personalDataSchema";
 
 const PersonalData = () => {
-  const { setStep, personalDataForm, setPersonalDataForm } =
-    useContext(FormContext);
+  const {
+    setStep,
+    personalDataForm,
+    setPersonalDataForm,
+    stateForms,
+    setStateForms,
+  } = useContext(FormContext);
   const onSubmit = () => {
     setPersonalDataForm(values);
     setStep("hobbys");
+    setStateForms({
+      ...stateForms,
+      personalDataForm: "diligenciado",
+      hobbysForm: "actual",
+    });
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: personalDataForm,
