@@ -9,6 +9,7 @@ const Final = () => {
     happinessForm,
     musicForm,
   } = useContext(FormContext);
+
   return (
     <>
       <div className="card">

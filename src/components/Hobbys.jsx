@@ -4,10 +4,16 @@ import FormContext from "../context/FormContext";
 import { hobbysSchema } from "../schemas/hobbysSchema";
 
 const Hobbys = () => {
-  const { setStep, hobbysForm, setHobbysForm } = useContext(FormContext);
+  const { setStep, hobbysForm, setHobbysForm, stateForms, setStateForms } =
+    useContext(FormContext);
   const onSubmit = () => {
     setHobbysForm(values);
     setStep("education");
+    setStateForms({
+      ...stateForms,
+      hobbysForm: "diligenciado",
+      educationForm: "actual",
+    });
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: hobbysForm,

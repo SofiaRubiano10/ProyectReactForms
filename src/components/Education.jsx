@@ -4,10 +4,21 @@ import FormContext from "../context/FormContext";
 import { educationSchema } from "../schemas/educationSchema";
 
 const Education = () => {
-  const { setStep, educationForm, setEducationForm } = useContext(FormContext);
+  const {
+    setStep,
+    educationForm,
+    setEducationForm,
+    stateForms,
+    setStateForms,
+  } = useContext(FormContext);
   const onSubmit = () => {
     setEducationForm(values);
     setStep("happiness");
+    setStateForms({
+      ...stateForms,
+      educationForm: "diligenciado",
+      happinessForm: "actual",
+    });
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: educationForm,

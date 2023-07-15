@@ -4,10 +4,15 @@ import FormContext from "../context/FormContext";
 import { musicSchema } from "../schemas/musicSchema";
 
 const Music = () => {
-  const { setStep, musicForm, setMusicForm } = useContext(FormContext);
+  const { setStep, musicForm, setMusicForm, stateForms, setStateForms } =
+    useContext(FormContext);
   const onSubmit = () => {
     setMusicForm(values);
     setStep("final");
+    setStateForms({
+      ...stateForms,
+      musicForm: "diligenciado",
+    });
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: musicForm,

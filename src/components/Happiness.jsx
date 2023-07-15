@@ -4,10 +4,21 @@ import FormContext from "../context/FormContext";
 import { happinessSchema } from "../schemas/happinessSchema";
 
 const Happiness = () => {
-  const { setStep, happinessForm, setHappinessForm } = useContext(FormContext);
+  const {
+    setStep,
+    happinessForm,
+    setHappinessForm,
+    stateForms,
+    setStateForms,
+  } = useContext(FormContext);
   const onSubmit = () => {
     setHappinessForm(values);
     setStep("music");
+    setStateForms({
+      ...stateForms,
+      happinessForm: "diligenciado",
+      musicForm: "actual",
+    });
   };
   const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: happinessForm,
