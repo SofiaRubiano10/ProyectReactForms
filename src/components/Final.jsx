@@ -10,7 +10,7 @@ const Final = () => {
     musicForm,
   } = useContext(FormContext);
   return (
-    <main>
+    <>
       <div className="card">
         <h2>Resume of you data</h2>
         <div className="card__info">
@@ -51,7 +51,7 @@ const Final = () => {
       </div>
 
       <h3>Thanks for your participation</h3>
-    </main>
+    </>
   );
 };
 

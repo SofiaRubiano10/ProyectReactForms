@@ -16,7 +16,7 @@ const Education = () => {
   });
 
   return (
-    <main>
+    <>
       <h3>Education</h3>
       <div className="card">
         <form onSubmit={handleSubmit} autoComplete="off" noValidate>
@@ -70,7 +70,7 @@ const Education = () => {
           </div>
         </form>
       </div>
-    </main>
+    </>
   );
 };
 

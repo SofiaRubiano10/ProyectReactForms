@@ -15,7 +15,7 @@ const Happiness = () => {
     onSubmit,
   });
   return (
-    <main>
+    <>
       <h3>Happiness</h3>
       <div className="card">
         <form onSubmit={handleSubmit} autoComplete="off" noValidate>
@@ -58,7 +58,7 @@ const Happiness = () => {
           </div>
         </form>
       </div>
-    </main>
+    </>
   );
 };
 

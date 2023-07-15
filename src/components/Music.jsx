@@ -15,7 +15,7 @@ const Music = () => {
     onSubmit,
   });
   return (
-    <main>
+    <>
       <h3>Music</h3>
       <div className="card">
         <form onSubmit={handleSubmit} autoComplete="off" noValidate>
@@ -68,7 +68,7 @@ const Music = () => {
           </div>
         </form>
       </div>
-    </main>
+    </>
   );
 };
 

@@ -18,8 +18,8 @@ function App() {
   });
   const [step, setStep] = useState("personaldata");
   const [personalDataForm, setPersonalDataForm] = useState({
-    name: "Maria",
-    surname: "Reyes",
+    name: "",
+    surname: "",
     age: 1,
   });
   const [hobbysForm, setHobbysForm] = useState({
@@ -57,13 +57,15 @@ function App() {
       }}
     >
       <div className="container">
-        <StateForms />
-        {step === "personaldata" && <PersonalData />}
-        {step === "hobbys" && <Hobbys />}
-        {step === "education" && <Education />}
-        {step === "happiness" && <Happiness />}
-        {step === "music" && <Music />}
-        {step === "final" && <Final />}
+        <main>
+          <StateForms />
+          {step === "personaldata" && <PersonalData />}
+          {step === "hobbys" && <Hobbys />}
+          {step === "education" && <Education />}
+          {step === "happiness" && <Happiness />}
+          {step === "music" && <Music />}
+          {step === "final" && <Final />}
+        </main>
       </div>
     </FormContext.Provider>
   );

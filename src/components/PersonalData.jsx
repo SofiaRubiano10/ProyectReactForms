@@ -26,7 +26,7 @@ const PersonalData = () => {
     onSubmit,
   });
   return (
-    <main>
+    <>
       <h3>Personal Data</h3>
       <div className="card">
         <form onSubmit={handleSubmit} autoComplete="off" noValidate>
@@ -74,7 +74,7 @@ const PersonalData = () => {
           <button type="submit">Next</button>
         </form>
       </div>
-    </main>
+    </>
   );
 };
 
