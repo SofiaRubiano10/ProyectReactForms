@@ -43,8 +43,6 @@ const Music = () => {
             </div>
           </fieldset>
           <fieldset>
-            {/* TODO:si lo inicializo no me deja modificarlo, pero tampoco me está
-            guardando la fecha */}
             <label htmlFor="volume">Volume</label>
             <input
               type="range"

@@ -5,6 +5,29 @@
   padding: 1.3rem;
   margin: 0 1.5rem;
   border-radius: 10px;
+  h2 {
+    font-weight: 400;
+    text-align: center;
+  }
+  &__info {
+    margin-top: 10px;
+    background-color: v.$bg-card-info;
+    border-radius: 10px;
+    h1 {
+      padding: 10px;
+      font-weight: 500;
+      color: v.$white;
+      text-align: center;
+    }
+    &-info {
+      padding: 10px;
+      display: block;
+      p {
+        color: v.$black;
+        text-transform: capitalize;
+      }
+    }
+  }
   &__buttons {
     display: flex;
     gap: 10px;

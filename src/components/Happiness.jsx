@@ -23,7 +23,7 @@ const Happiness = () => {
             <label htmlFor="date">
               When was the last time that you felt happy?
             </label>
-            TODO:no está guardando fecha
+
             <input
               type="date"
               id="date"
