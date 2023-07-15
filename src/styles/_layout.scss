@@ -1,7 +1,7 @@
 @use "./variables" as v;
 
 .container {
-  height: auto;
+  min-height: 100vh;
   padding: 20px;
   font-family: v.$font-family;
   background-color: v.$bg-container;

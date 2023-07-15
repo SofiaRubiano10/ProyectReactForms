@@ -56,6 +56,8 @@ const Music = () => {
               min="0"
               max="15"
               value={values.volume}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
             {errors.volume && <p className="error">{errors.volume}</p>}
           </fieldset>
