@@ -42,7 +42,7 @@ const Education = () => {
               <option value="">Select your educational level</option>
               <option value="inicial">Initial</option>
               <option value="preschool">Preschool</option>
-              <option value="primaryb">Primary bacic</option>
+              <option value="primaryb">Primary basic</option>
               <option value="basichs">Basic high school</option>
               <option value="half">Half</option>
               <option value="superior">Superior</option>

@@ -20,7 +20,7 @@ function App() {
   const [personalDataForm, setPersonalDataForm] = useState({
     name: "",
     surname: "",
-    age: 1,
+    age: "",
   });
   const [hobbysForm, setHobbysForm] = useState({
     hobbys: "",
@@ -35,7 +35,7 @@ function App() {
   });
   const [musicForm, setMusicForm] = useState({
     name: "",
-    volume: 2,
+    volume: 0,
   });
   return (
     <FormContext.Provider
