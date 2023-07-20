@@ -1,0 +1,34 @@
+import { Meta, Description, Canvas, Controls } from "@storybook/blocks";
+import * as BotonStories from "./Boton.stories";
+import Botones from "../assets/Botones.jpeg";
+
+<Meta of={BotonStories} name="Docs" />
+<Description of={BotonStories} />
+
+<style>
+  {`
+.mensaje{
+    border:1px solid orange;
+    background-color: #FFF9C4;
+    color:orange;
+    padding:10px;
+    margin:10px;
+}
+`}
+</style>
+
+# Documentación del componente Botón
+
+El componente está diseñado para mostrar Botones en la aplicación recibiendo párametros que hacen que la visualización sea flexible.
+
+## Visualización de los botones en la página
+
+<img src={Botones} alt="Botones" />
+
+## Herramientas utilizadas
+
+- CSS
+- React
+
+<Canvas of={BotonStories.Primary} />
+<Controls of={BotonStories.Primary} />
