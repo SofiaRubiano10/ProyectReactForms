@@ -1,0 +1,22 @@
+import { Meta, Description, Canvas, Controls } from "@storybook/blocks";
+import * as TextoStories from "./Texto.stories";
+import texto from "../assets/texto.jpeg";
+
+<Meta of={TextoStories} name="Docs" />
+<Description of={TextoStories} />
+
+# Documentación del componente Texto
+
+El componente está diseñado para mostrar Textos en la aplicación recibiendo párametros que hacen que la visualización sea flexible.
+
+## Visualización de los varios textos en la página
+
+<img src={texto} alt="texto" />
+
+## Herramientas utilizadas
+
+- CSS
+- React
+
+<Canvas of={TextoStories.Texto1} />
+<Controls of={TextoStories.Texto1} />
